@@ -19,8 +19,5 @@ jobs:
       - name: Install uv
         run: curl -LsSf https://astral.sh/uv/install.sh | sh
 
-      - name: Install deps
-        run: uv sync --dev
-
       - name: Run pre-commit hooks
         run: uvx run pre-commit run --all-files
