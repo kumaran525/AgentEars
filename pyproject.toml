@@ -1,0 +1,32 @@
+[project]
+name = "AGENTEARS"
+version = "0.1.0"
+dependencies = [
+    "detect-secrets>=1.5.0",
+    "faiss-gpu>=1.7.2",
+    "numpy==1.26.4",
+    "pre-commit>=4.5.1",
+    "presidio-analyzer>=2.2.360",
+    "presidio-anonymizer>=2.2.360",
+    "pydantic>=2.12.5",
+    "ruff>=0.14.10",
+    "torch>=2.9.1",
+    "transformers>=4.57.3",
+]
+requires-python = ">=3.10,<3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+select = [
+  "E", "F", "I", "B", "UP"
+]
+
+ignore = [
+  "E501"  # line length handled by formatter
+]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
